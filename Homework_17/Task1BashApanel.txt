@@ -1,0 +1,15 @@
+
+#!/bin/bash
+
+PS3='Хотите установить Python?'
+
+echo
+select Answer in 'yes' 'no'
+do
+if [[ $REPLY = 1 ]]
+then
+echo 'Вы выбрали установить python'&&  break 
+else
+echo 'Все-равно установим' &&  break
+fi
+done

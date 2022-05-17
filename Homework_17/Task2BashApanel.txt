@@ -1,0 +1,12 @@
+#!/bin/bash 
+	word=yes
+	while [[ $word != '.' ]]
+	do
+	read word
+	if [[ ${#word} -le 5 ]]
+	then
+	echo 'ok'
+	else
+	echo 'слово слишком длинное'
+	fi
+	done
