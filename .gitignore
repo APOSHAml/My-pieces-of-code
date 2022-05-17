@@ -3,6 +3,34 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+**/.venv/
+**/venv/
+*.bak
+*.log
+*.py[cod]
+*.swp
+*~
+.DS_Store
+.coverage
+.env
+.idea/
+.mypy_cache/
+.pytest_cache/
+.secrets.*
+.vscode/
+Pipfile.lock
+__pycache__/
+config/.secrets/
+coverage.xml
+db.sqlite3
+htmlcov/
+zsh-syntax-highlighting/
+reports
+
+
+
+
+
 # C extensions
 *.so
 
