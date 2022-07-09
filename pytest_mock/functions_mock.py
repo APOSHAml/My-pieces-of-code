@@ -1,11 +1,18 @@
 import datetime
 import time
 from dataclasses import dataclass
+from io import BytesIO
 from typing import List
 
+import httpx
 import requests
+from PIL import Image
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
+
+r = httpx.get("http://placegoat.com/width/height")
+i = Image.open(BytesIO(r.content))
+# print(i.show())
 
 
 class Blog:
