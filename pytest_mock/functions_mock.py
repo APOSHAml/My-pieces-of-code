@@ -1,18 +1,24 @@
 import datetime
+import json
 import time
 from dataclasses import dataclass
 from io import BytesIO
 from typing import List
-
+import html_to_json
 import httpx
 import requests
 from PIL import Image
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
 
-r = httpx.get("http://placegoat.com/width/height")
-i = Image.open(BytesIO(r.content))
-# print(i.show())
+
+
+
+
+
+r = httpx.get("https://www.hugedomains.com/domain_profile.cfm?d=placegoat.com")
+
+
 
 
 class Blog:
@@ -70,3 +76,4 @@ def discount_calculator(
         return value * (1.0 - discount)
     else:
         return value
+

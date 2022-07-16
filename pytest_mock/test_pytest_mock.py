@@ -2,6 +2,7 @@ from pathlib import Path
 
 import requests
 from pytest import MonkeyPatch
+from softest import TestCase
 
 import functions_mock
 from functions_mock import Calculator
@@ -61,3 +62,13 @@ def test_get_json(monkeypatch):
     # app.get_json, which contains requests.get, uses the monkeypatch
     result = functions_mock.get_json("https://fakeurl")
     assert result["mock_key"] == "mock_response"
+
+
+
+class TestSoftAsserts(TestCase):
+
+    def test_soft_assert(self):
+        self.soft_assert(self.assertIs, 5, 5)
+        self.soft_assert(self.assertAlmostEqual, 4.99999999, 5)
+        self.soft_assert(self.assertLessEqual, 4.9, 5)
+        self.assert_all()
